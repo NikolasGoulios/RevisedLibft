@@ -6,13 +6,13 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 09:58:55 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/05/29 12:56:10 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/21 18:27:58 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-static unsigned long	ft_strlen(const char *s);
+//static unsigned long	ft_strlen(const char *s);
 static int				rec_print(unsigned long n, const char *base);
 
 int	ft_putaddress(void *format)
@@ -32,7 +32,7 @@ int	ft_putaddress(void *format)
 	return (len);
 }
 
-static unsigned long	ft_strlen(const char *s)
+/*static unsigned long	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ static unsigned long	ft_strlen(const char *s)
 	while (s[i] != 0)
 		i++;
 	return (i);
-}
+}*/
 
 static int	rec_print(unsigned long n, const char *base)
 {

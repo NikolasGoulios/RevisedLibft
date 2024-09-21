@@ -6,11 +6,11 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:27:48 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/05/18 13:26:24 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/21 18:25:11 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putchar(char c)
 {
