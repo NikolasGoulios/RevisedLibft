@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 20:51:07 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:32:57 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/23 17:36:10 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@
 # ifndef MAX_FD
 #  define MAX_FD 1024
 # endif
-
 
 #endif
