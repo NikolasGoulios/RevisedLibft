@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/08/25 20:12:07 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/21 18:31:10 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ typedef struct s_list
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_calloc(size_t count, size_t size);
 void	ft_putchar_fd(char c, int fd);
+int		ft_putstr(char *str);
+int		ft_putchar(char c);
 void	ft_putendl_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr(int n);
 void	ft_putstr_fd(char *str, int fd);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);

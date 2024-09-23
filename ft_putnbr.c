@@ -6,11 +6,11 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 09:49:30 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/05/20 12:48:59 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/21 18:30:05 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putnbr(int n)
 {

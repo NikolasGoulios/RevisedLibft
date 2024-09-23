@@ -6,11 +6,11 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:40:23 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/05/22 11:59:46 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/09/21 18:24:29 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static char	convert_to_hex_digit(int digit, char format)
 {
