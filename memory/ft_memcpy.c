@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/04/18 13:10:00 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:22:09 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	size_t		index;
+	char		*de;
+	char		*sr;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	index = 0;
+	de = (char *)dst;
+	sr = (char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	while (index < n)
+	{
+		de[index] = sr[index];
+		index++;
+	}
+	return (dst);
+}

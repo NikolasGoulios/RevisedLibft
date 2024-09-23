@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/04/19 15:33:11 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:23:31 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
+	{
+		if (s[i] == ((char)c))
+			return ((char *)(s + i));
+		i--;
+	}
+	return (0);
+}

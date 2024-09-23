@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/05/18 11:44:11 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:22:53 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+int	ft_putunsigned(unsigned int n)
+{
+	int	count;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	count = 0;
+	if (n > 9)
+	{
+		count += ft_putunsigned(n / 10);
+		if (count == -1)
+			return (-1);
+		count += ft_putchar(n % 10 + 48);
+	}
+	else
+		count += ft_putchar(n + 48);
+	if (count == -1)
+		return (-1);
+	return (count);
+}

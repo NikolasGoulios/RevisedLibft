@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/04/22 12:45:26 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:22:07 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+int	ft_memcmp(const char *s1, const void *s2, size_t n)
+{
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (n > 0)
+	{
+		if (*str1 != *str2)
+			return ((int)(*str1 - *str2));
+		str1++;
+		str2++;
+		n--;
+	}
+	if (n == 0)
+		return (0);
+	return ((int)(*str1 - *str2));
+}

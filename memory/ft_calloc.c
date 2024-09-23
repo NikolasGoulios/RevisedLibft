@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/04/25 16:04:24 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:22:02 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+void	*ft_calloc(size_t count, size_t size)
+{
+	unsigned char	*tmp;
+	size_t			i;
+	size_t			total;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	i = 0;
+	total = count * size;
+	if (total > 0 && size > 0 && total >= (18446744073709551615UL) / size)
+		return (NULL);
+	tmp = malloc(total);
+	if (!tmp)
+		return (NULL);
+	while (i < total)
+	{
+		tmp[i++] = 0;
+	}
+	return (tmp);
+}

@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/04/28 11:49:23 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:23:08 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+char	*ft_strjoin(const char *s1, const char *s2)
+{
+	int		i;
+	int		j;
+	char	*newstr;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	i = 0;
+	j = 0;
+	newstr = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1)
+			*sizeof(char));
+	if (!newstr)
+		return (NULL);
+	while (s1[i])
+		newstr[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		newstr[j++] = s2[i++];
+	newstr[j] = 0;
+	return (newstr);
+}

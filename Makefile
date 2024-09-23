@@ -6,94 +6,100 @@
 #    By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/27 23:49:21 by ngoulios          #+#    #+#              #
-#    Updated: 2024/08/25 20:12:05 by ngoulios         ###   ########.fr        #
+#    Updated: 2024/09/23 16:57:38 by ngoulios         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./
 
-SRCS = ft_atoi.c \
-       ft_putunsigned.c\
-       ft_puthexa.c \
-       ft_putaddress.c \
-       ft_printf.c \
-       ft_bzero.c \
-       ft_calloc.c \
-       ft_isalnum.c \
-       ft_isalpha.c \
-       ft_isascii.c \
-       ft_isdigit.c \
-       ft_isprint.c \
-       ft_memchr.c \
-       ft_memcmp.c \
-       ft_memcpy.c \
-       ft_memmove.c \
-       ft_memset.c \
-       ft_putchar_fd.c \
-       ft_putendl_fd.c \
-       ft_putnbr_fd.c \
-       ft_putstr_fd.c \
-       ft_strmapi.c \
-       ft_strtrim.c \
-       ft_striteri.c \
-       ft_strchr.c \
-       ft_strdup.c \
-       ft_strjoin.c \
-       ft_strlcat.c \
-       ft_strlcpy.c \
-       ft_strlen.c \
-       ft_strncmp.c \
-       ft_strnstr.c \
-       ft_strrchr.c \
-       ft_tolower.c \
-       ft_toupper.c \
-       ft_substr.c \
-       ft_split.c \
-       ft_strrchr.c \
-       ft_itoa.c 
+
+SRC_CTYPE = ctype/ft_isalnum.c \
+           	ctype/ft_isalpha.c \
+           	ctype/ft_isascii.c \
+           	ctype/ft_isdigit.c \
+           	ctype/ft_isprint.c \
+           	ctype/ft_tolower.c \
+           	ctype/ft_toupper.c
+
+SRC_MEMORY = memory/ft_memset.c \
+             memory/ft_memcpy.c \
+             memory/ft_memmove.c \
+             memory/ft_memcmp.c \
+             memory/ft_memchr.c \
+             memory/ft_bzero.c \
+             memory/ft_calloc.c
+
+SRC_STRING = string/ft_strlen.c \
+             string/ft_strncmp.c \
+             string/ft_strnstr.c \
+             string/ft_strdup.c \
+             string/ft_strchr.c \
+             string/ft_strlcpy.c \
+             string/ft_strlcat.c \
+             string/ft_strjoin.c \
+             string/ft_split.c \
+             string/ft_strtrim.c \
+             string/ft_substr.c \
+			 string/ft_strmapi.c \
+			 string/ft_strrchr.c \
+             string/ft_striteri.c
+
+SRC_MATH = 	math/ft_atoi.c \
+           	math/ft_itoa.c
+
+SRC_OUTPUT = output/ft_putchar_fd.c \
+             output/ft_putstr_fd.c \
+             output/ft_putendl_fd.c \
+             output/ft_putnbr_fd.c\
+			 output/ft_printf.c \
+             output/ft_putaddress.c \
+             output/ft_puthexa.c \
+			 output/ft_putchar.c \
+			 output/ft_putnbr.c \
+			 output/ft_putstr.c \
+             output/ft_putunsigned.c
+
+SRC_LIST = 	list/ft_lstnew_bonus.c \
+           	list/ft_lstadd_front_bonus.c \
+           	list/ft_lstsize_bonus.c \
+           	list/ft_lstlast_bonus.c \
+           	list/ft_lstadd_back_bonus.c \
+           	list/ft_lstdelone_bonus.c \
+           	list/ft_lstclear_bonus.c \
+           	list/ft_lstiter_bonus.c \
+           	list/ft_lstmap_bonus.c
+
+
+SRCS = $(SRC_CTYPE) $(SRC_MEMORY) $(SRC_STRING) $(SRC_MATH) $(SRC_OUTPUT) $(SRC_LIST)
+
 
 OBJS = $(SRCS:.c=.o)
 
+HEADER = libft.h
+
+
 all: $(NAME)
-
-SOURCES_BONUS = ft_lstnew_bonus.c \
-                ft_lstadd_front_bonus.c \
-                ft_lstsize_bonus.c \
-                ft_lstlast_bonus.c \
-                ft_lstadd_back_bonus.c \
-                ft_lstdelone_bonus.c \
-                ft_lstclear_bonus.c \
-                ft_lstiter_bonus.c \
-                ft_lstmap_bonus.c 
-
-BONUS_OBJECTS = $(SOURCES_BONUS:%.c=%.o)
-
-bonus: .bonus
-.bonus: $(NAME) $(BONUS_OBJECTS)
-	ar -rcs  $(NAME) $(BONUS_OBJECTS)
-	@touch .bonus
 
 
 $(NAME): $(OBJS)
-	$(CC) -c $(CFLAGS) $(SRCS)
-	ar -rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
-all: $(NAME)
+
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 
 clean:
 	rm -f $(OBJS)
-	rm -f $(BONUS_OBJECTS)
+
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f .bonus
+
 
 re: fclean all
 
-rebonus: fclean bonus
-
-.PHONY: all clean fclean re bonus rebonus
+.PHONY: all clean fclean re

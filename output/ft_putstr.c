@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:44:28 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:05 by ngoulios         ###   ########.fr       */
+/*   Created: 2024/05/17 09:49:41 by ngoulios          #+#    #+#             */
+/*   Updated: 2024/09/23 16:22:49 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <string.h>
+int	ft_putstr(char *str)
+{
+	int	i;
+	int	count;
 
-# include "./string/string.h"
-# include "./output/output.h"
-# include "./memory/memory.h"
-# include "./math/math.h"
-# include "./list/list.h"
-# include "./ctype/ctype.h"
-
-#endif
+	i = 0;
+	count = 0;
+	if (!str)
+	{
+		if (write(1, "(null)", 6) == -1)
+			return (-1);
+		return (6);
+	}
+	while (str[i] != '\0')
+	{
+		if (write(1, &str[i], 1) == -1)
+			return (-1);
+		i++;
+		count++;
+	}
+	return (count);
+}
