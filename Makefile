@@ -6,7 +6,7 @@
 #    By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/27 23:49:21 by ngoulios          #+#    #+#              #
-#    Updated: 2024/09/23 16:57:38 by ngoulios         ###   ########.fr        #
+#    Updated: 2024/09/23 17:34:25 by ngoulios         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,10 @@ SRC_LIST = 	list/ft_lstnew_bonus.c \
            	list/ft_lstiter_bonus.c \
            	list/ft_lstmap_bonus.c
 
+SRC_GNL =	gnl/get_next_line.c
 
-SRCS = $(SRC_CTYPE) $(SRC_MEMORY) $(SRC_STRING) $(SRC_MATH) $(SRC_OUTPUT) $(SRC_LIST)
+
+SRCS = $(SRC_CTYPE) $(SRC_MEMORY) $(SRC_STRING) $(SRC_MATH) $(SRC_OUTPUT) $(SRC_LIST) $(SRC_GNL)
 
 
 OBJS = $(SRCS:.c=.o)
