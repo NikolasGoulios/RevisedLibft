@@ -6,12 +6,12 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:17:31 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/08 17:17:35 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/20 12:53:22 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
-    return (c == ' ' || c == '\t' || c == '\n' ||
-            c == '\v' || c == '\f' || c == '\r');
+	return ((c == ' ' || c == '\t' || c == '\n'
+			|| c == '\v' || c == '\f' || c == '\r'));
 }

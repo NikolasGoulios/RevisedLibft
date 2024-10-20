@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:25:54 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/19 13:04:41 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/20 12:41:35 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,23 @@
 /**
  * @brief Converts a string to an integer.
  * 
- * This function takes a string `str` and converts it to an integer, interpreting the
- * number represented by the characters in the string. It skips any leading whitespace,
- * handles optional '+' or '-' signs, and converts the number accordingly.
+ * Converts the string `str` to an integer, skipping leading whitespace and 
+ * handling optional '+' or '-' signs.
  * 
- * @param str The string to be converted.
- * @return The converted integer. If no valid conversion can be performed, the function returns 0.
+ * @param str The string to convert.
+ * @return The converted integer. Returns 0 if no valid conversion occurs.
  */
-int ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 /**
  * @brief Converts an integer to a string.
  * 
- * This function takes an integer `n` and converts it into a null-terminated string.
- * The resulting string represents the integer, including the sign if necessary.
+ * Converts the integer `n` to a null-terminated string. The string includes the
+ * sign if needed.
  * 
- * @param n The integer to be converted.
- * @return A pointer to the newly allocated string representing the integer, or NULL if the allocation fails.
+ * @param n The integer to convert.
+ * @return A pointer to the newly allocated string or NULL if allocation fails.
  */
-char *ft_itoa(int n);
+char	*ft_itoa(int n);
 
 #endif
