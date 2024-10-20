@@ -6,12 +6,64 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:46:55 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 12:51:21 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/20 13:59:01 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRING_H
 # define STRING_H
+
+# include <stdio.h>
+
+/**
+ * @brief Converts a string to uppercase.
+ * 
+ * Converts all lowercase characters in the string `str` to uppercase.
+ * 
+ * @param str The string to convert.
+ * @return A pointer to the converted string.
+ */
+char	*ft_strupper(char *str);
+
+/**
+ * @brief Reverses a string in place.
+ * 
+ * Reverses the characters in the string `str` directly in memory.
+ * 
+ * @param str The string to reverse.
+ * @return A pointer to the reversed string.
+ */
+char	*ft_strrev(char *str);
+
+/**
+ * @brief Duplicates up to `n` characters of a string.
+ * 
+ * Allocates memory and copies up to `n` characters from the string `s1`.
+ * 
+ * @param s1 The string to duplicate.
+ * @param n The number of characters to copy.
+ * @return A pointer to the new string, or NULL if allocation fails.
+ */
+char	*ft_strndup(const char *s1, size_t n);
+
+/**
+ * @brief Converts a string to lowercase.
+ * 
+ * Converts all uppercase characters in the string `str` to lowercase.
+ * 
+ * @param str The string to convert.
+ * @return A pointer to the converted string.
+ */
+char	*ft_strlower(char *str);
+
+/**
+ * @brief Frees a string and sets the pointer to NULL.
+ * 
+ * Frees the memory allocated for `*as` and sets the pointer to NULL.
+ * 
+ * @param as The address of the string pointer to free.
+ */
+void	ft_strdel(char **as);
 
 /**
  * @brief Splits a string into an array based on a delimiter.
