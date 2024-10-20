@@ -77,6 +77,11 @@ gcc -L. -lft your_file.c -o your_program
 - `ft_strnstr` - Locates a substring in a string.
 - `ft_strdup` - Duplicates a string.
 - `ft_strmapi` - Applies a function to each character of a string.
+- `ft_strupper` - Converts a string to uppercase, respectively.
+- `ft_strlower` - Converts a string to lowercase, respectively.
+- `ft_strndup` - Duplicates a string up to n characters.
+- `ft_strdel` - Safely frees memory for strings.
+- `ft_strdel` - Safely frees memory blocks. 
 
 ### Memory Functions (memory/)
 - `ft_memset` - Fills a block of memory with a specific value.
