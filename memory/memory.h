@@ -6,13 +6,15 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:31:35 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 12:44:01 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:47:59 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEMORY_H
 # define MEMORY_H
 
+# include <stddef.h>
+# include <stdlib.h>
 /**
  * @brief Fills a memory area with zeros.
  * 

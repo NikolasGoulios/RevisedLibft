@@ -6,9 +6,11 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:36:02 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/23 15:41:33 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:37:54 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "string.h"
 
 double	ft_atof(const char *str)
 {

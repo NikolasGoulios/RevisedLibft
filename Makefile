@@ -6,7 +6,7 @@
 #    By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/27 23:49:21 by ngoulios          #+#    #+#              #
-#    Updated: 2024/09/23 17:45:35 by ngoulios         ###   ########.fr        #
+#    Updated: 2024/10/23 19:43:52 by ngoulios         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC_MEMORY = memory/ft_memset.c \
              memory/ft_memmove.c \
              memory/ft_memcmp.c \
              memory/ft_memchr.c \
+			 memory/ft_memdel.c \
              memory/ft_bzero.c \
              memory/ft_calloc.c
 
@@ -52,7 +53,14 @@ SRC_STRING = string/ft_strlen.c \
              string/ft_substr.c \
              string/ft_strmapi.c \
              string/ft_strrchr.c \
-             string/ft_striteri.c
+             string/ft_striteri.c \
+			 string/ft_atof.c \
+			 string/ft_strcmp.c \
+			 string/ft_strlower.c \
+			 string/ft_strndup.c \
+			 string/ft_strupper.c \
+			 string/ft_strrev.c \
+			 string/ft_strdel.c
 
 
 SRC_MATH =  math/ft_atoi.c \

@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:46:55 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 13:59:01 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/23 19:46:14 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define STRING_H
 
 # include <stdio.h>
+# include <stddef.h>  // For size_t
+
 
 /**
  * @brief Converts a string to uppercase.
@@ -225,5 +227,11 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @return The extracted substring, or NULL if allocation fails.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+
+double	ft_atof(const char *str);
+
+int ft_strcmp(char *s1, char *s2);
+void	ft_strdel(char **as);
 
 #endif
