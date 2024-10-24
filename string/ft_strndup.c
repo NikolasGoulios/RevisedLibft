@@ -6,11 +6,12 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 13:42:18 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 14:01:55 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:09:00 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
+#include <stdlib.h>
 
 char	*ft_strndup(const char *s1, size_t n)
 {

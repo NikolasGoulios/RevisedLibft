@@ -6,7 +6,7 @@
 #    By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/27 23:49:21 by ngoulios          #+#    #+#              #
-#    Updated: 2024/10/23 19:43:52 by ngoulios         ###   ########.fr        #
+#    Updated: 2024/10/24 19:35:15 by ngoulios         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_CTYPE = ctype/ft_isalnum.c \
             ctype/ft_isdigit.c \
             ctype/ft_isprint.c \
             ctype/ft_tolower.c \
+			ctype/ft_isspace.c \
             ctype/ft_toupper.c
 
 

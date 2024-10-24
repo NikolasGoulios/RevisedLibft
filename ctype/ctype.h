@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:14:34 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 12:26:00 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:02:21 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,7 @@ int	ft_tolower(int c);
  * @return The uppercase character, or `c` if not a lowercase letter.
  */
 int	ft_toupper(int c);
+
+int	ft_isspace(int c);
 
 #endif

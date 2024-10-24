@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:46:55 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/23 19:46:14 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:34:40 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,7 +231,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 double	ft_atof(const char *str);
 
-int ft_strcmp(char *s1, char *s2);
+int 	ft_strcmp(char *s1, char *s2);
 void	ft_strdel(char **as);
 
+char	*ft_strrev(char *str);
 #endif
