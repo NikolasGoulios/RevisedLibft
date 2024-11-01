@@ -6,11 +6,9 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:17:31 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/23 19:51:18 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:17:33 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include  "ctype.h"
 
 int	ft_isspace(int c)
 {
