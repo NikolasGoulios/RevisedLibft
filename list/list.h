@@ -6,12 +6,13 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:20:48 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 12:40:13 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:17:33 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
+# include <stdbool.h>
 
 /**
  * @brief A structure representing a node in a linked list.
@@ -27,6 +28,18 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_stack_node
+{
+	int					nbr;
+	int					index;
+	int					push_cost;
+	bool				above_median;
+	bool				cheapest;
+	struct s_stack_node	*target_node;
+	struct s_stack_node	*next;
+	struct s_stack_node	*prev;
+}	t_stack_node;
 
 /**
  * @brief Adds a new element to the end of a linked list.
