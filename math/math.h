@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:25:54 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/10/20 12:41:35 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/11/15 23:02:35 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ int		ft_atoi(const char *str);
  * @return A pointer to the newly allocated string or NULL if allocation fails.
  */
 char	*ft_itoa(int n);
+
+long	ft_atol(const char *str);
 
 #endif

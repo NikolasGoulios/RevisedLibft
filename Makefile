@@ -6,7 +6,7 @@
 #    By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/27 23:49:21 by ngoulios          #+#    #+#              #
-#    Updated: 2024/11/14 19:24:11 by ngoulios         ###   ########.fr        #
+#    Updated: 2024/11/15 23:02:58 by ngoulios         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ SRC_STRING = string/ft_strlen.c \
 
 
 SRC_MATH =  math/ft_atoi.c \
-            math/ft_itoa.c
+            math/ft_itoa.c \
+			math/ft_atol.c
 
 
 SRC_OUTPUT = output/ft_putchar_fd.c \
