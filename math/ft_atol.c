@@ -6,10 +6,11 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 23:01:43 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/11/15 23:02:18 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:28:28 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft/ctype/ctype.h"
 #include "math.h"
 #include <limits.h>
 
