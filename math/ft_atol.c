@@ -6,7 +6,7 @@
 /*   By: ngoulios <ngoulios@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 23:01:43 by ngoulios          #+#    #+#             */
-/*   Updated: 2024/11/16 15:28:28 by ngoulios         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:26:47 by ngoulios         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ long	ft_atol(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		results = results * 10 + (str[i] - '0');
-		if (results * sign > LONG_MAX)
-			return (-1);
-		if (results * sign < LONG_MIN)
-			return (0);
 		i++;
 	}
 	return (results * sign);
